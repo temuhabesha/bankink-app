@@ -1,6 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 import logoimg from '../../assets/abyssiniaLogo.webp'
+import { Link } from 'react-router-dom'
+import profileimage from '../../assets/jack.png'
 
 const Navbar = () => {
   return (
@@ -9,7 +11,7 @@ const Navbar = () => {
       <img src={logoimg} alt="" />
       <nav className="navbar">
           <ul>
-            <li><a href="">HOME</a></li>
+            <li><Link to="/">HOME</Link></li>
             <li><a href="">ABOUT</a></li>
             <li><a href="">TRANSACTION</a></li>
             <li><a href="">REAL_TIME_UPDATES</a></li>
@@ -22,7 +24,7 @@ const Navbar = () => {
             </ul>
            </div>
            <div className="profile">
-            <img src="" alt="profile image" />
+            <Link to="/account"><img src={profileimage} alt="profile image" /><span>account</span></Link>
            </div>
       </div>
     </div>

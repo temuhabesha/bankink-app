@@ -1,0 +1,49 @@
+.account{
+    background-color: #F7F7F7;
+}
+.inner_account{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    width: 70%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.title h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    border-bottom: 5px solid #F2AD1C;
+    width: 300px;
+    padding-bottom: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 10px;
+    width: 100%;
+}
+form div label{
+    font-size: 22px;
+}
+form div input{
+    width: 100%;
+    background-color: inherit;
+    padding: 10px;
+    border-radius: 50px;
+}
+form div select{
+    padding: 10px;
+    font-size: 22px;
+}
