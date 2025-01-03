@@ -1,0 +1,54 @@
+.vb{
+    background-color: rgb(247, 247, 247);
+}
+.innervb{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 40px 0px;
+}
+.title h1{
+  font-weight: 300;
+}
+.discription_and_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 0px;
+
+}
+.innervb img{
+    width: 50%;
+}
+.discription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.discription h1{
+    font-size: 25px;
+    font-weight: 600;
+
+}
+.discription p{
+    line-height: 1.8;
+    font-size: 20px;
+    font-weight: 300;
+}
+.discription a{
+    background-color: #F1AB15;
+    padding: 20px;
+    width: 180px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 100px;
+}
