@@ -120,7 +120,7 @@ const Account = () => {
             <div>
             <label htmlFor="">Account Type</label>
             <select name="" id="" onChange={e=>setaccounttype(e.target.value)} required>
-                <option value=" " >Account Type</option>
+                <option value="" >Account Type</option>
                 <option value="savings account" >savings account</option>
                 <option value="cheking accounts">cheking accounts</option>
                 <option value="special saving accounts">special saving accounts</option>
