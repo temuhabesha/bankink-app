@@ -15,20 +15,20 @@ const Account = () => {
   const[zone,setzone] = useState('');
   const[Woreda,setworeda] = useState('');
   const[Kebele,setkebele] = useState('');
-  const[house,sethousenumber] = useState('');
   const[Mobile,setmobile] = useState('');
-  const[Office,setofficenumber] = useState('');
   const[Gender,setgender] = useState('');
   const[mritalstatus,setmritalstatus] = useState('');
   const[accountnumber,setaccountnumber] = useState('');
   const[accounttype,setaccounttype] = useState('');
   const[employdetail,setemploymentdetail] = useState('');
-  const[idtype,setidtype] = useState('');
+  const[username,setusername] = useState('')
+  const[email,setemail] = useState('')
+  const[password,setpassword] = useState('')
 
  async function handelsubmit(event) {
    event.preventDefault();
     try {
-      await axios.post('http://localhost:3002/register',{fullname,fathername, mothername,Nationality,dateofbirth,birthplace,Region,regioncity,zone,Woreda,Kebele,house,Mobile,Office,Gender,mritalstatus,accountnumber,accounttype,employdetail,idtype})
+      await axios.post('http://localhost:3002/register',{fullname,fathername, mothername,Nationality,dateofbirth,birthplace,Region,regioncity,zone,Woreda,Kebele,Mobile,Gender,mritalstatus,accountnumber,accounttype,employdetail,username,email,password})
     } catch (error) {
       console.log(error)
     }
@@ -40,44 +40,42 @@ const Account = () => {
             <h1>Account Opening</h1>
         </div>
         <form onSubmit={handelsubmit}>
-           <div> 
-            <label htmlFor="">Title</label>
-            <input type="text" />
-            </div>
             <div>
             <label htmlFor="">Full Name*</label>
-            <input type="text"  onChange={e=>setfullname(e.target.value)}/>
+            <input type="text"  onChange={e=>setfullname(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Father's Full Name*</label>
-            <input type="text"  onChange={e=>setfathername(e.target.value)}/>
+            <input type="text"  onChange={e=>setfathername(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Mother's Full Name*</label>
-            <input type="text"  onChange={e=>setmothername(e.target.value)}/>
+            <input type="text"  onChange={e=>setmothername(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Nationality*</label>
-            <input type="text"  onChange={e=>setnationality(e.target.value)}/>
+            <input type="text"  onChange={e=>setnationality(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Gender*</label>
-            <select name="" id="" onChange={e=>setgender(e.target.value)}>
+            <select name="" id="" onChange={e=>setgender(e.target.value)} required>
+                <option value="" >select Gender</option>
                 <option value="Male" >Male</option>
                 <option value="Female">Female</option>
             </select>
             </div>
             <div>
             <label htmlFor="">Date of Birth*</label>
-            <input type="text"  onChange={e=>setdateofbirth(e.target.value)}/>
+            <input type="text"  onChange={e=>setdateofbirth(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Place of Birth*</label>
-            <input type="text"  onChange={e=>setbirthplace(e.target.value)}/>
+            <input type="text"  onChange={e=>setbirthplace(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Mrital Status*</label>
-            <select name="" id="" onChange={e=>setmritalstatus(e.target.value)}>
+            <select name="" id="" onChange={e=>setmritalstatus(e.target.value)} required>
+                <option value="" >Mirtal Status</option>
                 <option value="single" >single</option>
                 <option value="married">married</option>
                 <option value="separeted">separeted</option>
@@ -86,65 +84,32 @@ const Account = () => {
             </div>
             <div>
             <label htmlFor="">Region*</label>
-            <input type="text"   onChange={e=>setregion(e.target.value)}/>
+            <input type="text"   onChange={e=>setregion(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Region City</label>
-            <input type="text"   onChange={e=>setregioncity(e.target.value)}/>
+            <input type="text"   onChange={e=>setregioncity(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Sub city/Zone*</label>
-            <input type="text"   onChange={e=>setzone(e.target.value)}/>
+            <input type="text"   onChange={e=>setzone(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Woreda*</label>
-            <input type="text"   onChange={e=>setworeda(e.target.value)}/>
+            <input type="text"   onChange={e=>setworeda(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Kebele*</label>
-            <input type="text"   onChange={e=>setkebele(e.target.value)}/>
+            <input type="text"   onChange={e=>setkebele(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Mobile Number*</label>
-            <input type="text"   onChange={e=>setmobile(e.target.value)}/>
-            </div>
-            <div>
-            <label htmlFor="">House Number*</label>
-            <input type="text"   onChange={e=>sethousenumber(e.target.value)}/>
-            </div>
-            <div>
-            <label htmlFor="">Office Phone</label>
-            <input type="text"   onChange={e=>setofficenumber(e.target.value)}/>
-            </div>
-            <div>
-            <label htmlFor="">Id Type*</label>
-            <select name="" id="" onChange={e=>setidtype(e.target.value)}>
-                <option value="National ID" >National ID</option>
-                <option value="driving license">driving license</option>
-                <option value="passport">passport</option>
-                <option value="schoole id">schoole id</option>
-            </select>
-            </div>
-            <div>
-            <label htmlFor="">ID Number*</label>
-            <input type="text"  />
-            </div>
-            <div>
-            <label htmlFor="">ID Issue Date*</label>
-            <input type="text"  />
-            </div>
-            <div>
-            <label htmlFor="">ID Expired date*</label>
-            <input type="text"  />
-            </div>
-            <div>
-            <label htmlFor="">ID Issue</label>
-            <input type="text"  />
+            <input type="text"   onChange={e=>setmobile(e.target.value)} required/>
             </div>
             <div>
             <label htmlFor="">Employment Detail</label>
-            <select name="" id="" onChange={e=>setemploymentdetail(e.target.value)}>
-                <option value="employed" >National ID</option>
+            <select name="" id="" onChange={e=>setemploymentdetail(e.target.value)} required>
+                <option value="" >Employment details</option>
                 <option value="self employed">self employed</option>
                 <option value="unemployed">unemployed</option>
                 <option value="house wife">house wife</option>
@@ -154,15 +119,29 @@ const Account = () => {
             </div>
             <div>
             <label htmlFor="">Account Type</label>
-            <select name="" id="" onChange={e=>setaccounttype(e.target.value)}>
+            <select name="" id="" onChange={e=>setaccounttype(e.target.value)} required>
+                <option value=" " >Account Type</option>
                 <option value="savings account" >savings account</option>
                 <option value="cheking accounts">cheking accounts</option>
                 <option value="special saving accounts">special saving accounts</option>
             </select>
             </div>
+            
+            <div>
+            <label htmlFor="">username</label>
+            <input type="text" onChange={e=>setusername(e.target.value)} required/>
+            </div>
+            <div>
+            <label htmlFor="">password</label>
+            <input type="password" onChange={e=>setpassword(e.target.value)} required/>
+            </div>
+            <div>
+            <label htmlFor="">email</label>
+            <input type="email" onChange={e=>setemail(e.target.value)} required/>
+            </div>
             <div>
             <label htmlFor="">if you have an account please enter your account number</label>
-            <input type="text" onChange={e=>setaccountnumber(e.target.value)}/>
+            <input type="text" onChange={e=>setaccountnumber(e.target.value)} required/>
             </div>
             <button type='submit'>submit</button>
         </form>
