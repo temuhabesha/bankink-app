@@ -24,11 +24,10 @@ const Account = () => {
   const[username,setusername] = useState('')
   const[email,setemail] = useState('')
   const[password,setpassword] = useState('')
-
  async function handelsubmit(event) {
    event.preventDefault();
     try {
-      await axios.post('http://localhost:3002/register',{fullname,fathername, mothername,Nationality,dateofbirth,birthplace,Region,regioncity,zone,Woreda,Kebele,Mobile,Gender,mritalstatus,accountnumber,accounttype,employdetail,username,email,password})
+      await axios.post('http://localhost:5001/register',{fullname,fathername, mothername,Nationality,dateofbirth,birthplace,Region,regioncity,zone,Woreda,Kebele,Mobile,Gender,mritalstatus,accountnumber,accounttype,employdetail,username,email,password})
     } catch (error) {
       console.log(error)
     }
@@ -42,11 +41,11 @@ const Account = () => {
         <form onSubmit={handelsubmit}>
             <div>
             <label htmlFor="">Full Name*</label>
-            <input type="text"  onChange={e=>setfullname(e.target.value)} required/>
+            <input type="text"  onChange={e=>setfullname(e.target.value)} />
             </div>
             <div>
             <label htmlFor="">Father's Full Name*</label>
-            <input type="text"  onChange={e=>setfathername(e.target.value)} required/>
+            <input type="text"  onChange={e=>setfathername(e.target.value)} />
             </div>
             <div>
             <label htmlFor="">Mother's Full Name*</label>
