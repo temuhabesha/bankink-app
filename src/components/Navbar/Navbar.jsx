@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="login_and_profile">
            <div className="login">
             <ul>
-                <li><a href="">LOGIN</a></li>
+                <li><a href="/login">LOGIN</a></li>
             </ul>
            </div>
            <div className="profile">

@@ -1,0 +1,34 @@
+.login1{
+    width: 800px;
+    height: 600px;
+    background-color: #EDF2FA;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: auto;
+    margin: 30px auto;
+    padding: 30px 50px;
+    gap: 70px;
+}
+.login1 h1{
+    font-size: 45px;
+    text-decoration: underline;
+}
+.login1 form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+.useremail, .userpassword{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.login1 form button{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: blueviolet;
+}
