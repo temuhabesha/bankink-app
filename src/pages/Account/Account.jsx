@@ -27,7 +27,7 @@ const Account = () => {
  async function handelsubmit(event) {
    event.preventDefault();
     try {
-      await axios.post('http://localhost:5001/register',{fullname,fathername, mothername,Nationality,dateofbirth,birthplace,Region,regioncity,zone,Woreda,Kebele,Mobile,Gender,mritalstatus,accountnumber,accounttype,employdetail,username,email,password})
+      await axios.post('http://localhost:3001/register',{fullname,fathername, mothername,Nationality,dateofbirth,birthplace,Region,regioncity,zone,Woreda,Kebele,Mobile,Gender,mritalstatus,accountnumber,accounttype,employdetail,username,email,password})
     } catch (error) {
       console.log(error)
     }
