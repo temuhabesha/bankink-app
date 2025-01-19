@@ -12,15 +12,15 @@ const Navbar = () => {
       <nav className="navbar">
           <ul>
             <li><Link to="/">HOME</Link></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">TRANSACTION</a></li>
-            <li><a href="">REAL_TIME_UPDATES</a></li>
+            <li><Link to="">ABOUT</Link></li>
+            <li><Link to="/login">TRANSACTION</Link></li>
+            <li><Link to="">REAL_TIME_UPDATES</Link></li>
           </ul>
       </nav>
       <div className="login_and_profile">
            <div className="login">
             <ul>
-                <li><a href="/login">LOGIN</a></li>
+                <li><Link to="/login">LOGIN</Link></li>
             </ul>
            </div>
            <div className="profile">

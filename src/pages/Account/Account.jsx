@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Account.css'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 
 const Account = () => {
 
@@ -24,12 +25,20 @@ const Account = () => {
   const[username,setusername] = useState('')
   const[email,setemail] = useState('')
   const[password,setpassword] = useState('')
+
+  const navigate = useNavigate()
+
  async function handelsubmit(event) {
    event.preventDefault();
     try {
-      await axios.post('http://localhost:3001/register',{fullname,fathername, mothername,Nationality,dateofbirth,birthplace,Region,regioncity,zone,Woreda,Kebele,Mobile,Gender,mritalstatus,accountnumber,accounttype,employdetail,username,email,password})
+      const responce = await axios.post('http://localhost:3001/register',{fullname,fathername, mothername,Nationality,dateofbirth,birthplace,Region,regioncity,zone,Woreda,Kebele,Mobile,Gender,mritalstatus,accountnumber,accounttype,employdetail,username,email,password})
+         const status = responce.status;
+         if(status == 200){
+           alert(responce.data.msg)
+           navigate("/login");
+         }
     } catch (error) {
-      console.log(error)
+      alert(error.response.data.msg)
     }
  }
   return (
