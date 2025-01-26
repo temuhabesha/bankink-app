@@ -1,25 +1,26 @@
 import React from 'react'
-import './Transaction.css'
-
+import { Link } from 'react-router-dom';
+import image1 from '../../assets/image1.jpg'
 const Transaction = () => {
   return (
     <div className="transaction">
-      <h1>MONY TRANSFER</h1>
-      <form>
-        <div className="sendersaccount">
-          <label htmlFor="senderaccount">senders account</label>
-          <input type="text" placeholder="senders account" />
-        </div>
-        <div className="reciversaccount">
-          <label htmlFor="reciveraccount">reciver account</label>
-          <input type="text" placeholder="reciver account" />
-        </div>
-        <div className="ammount">
-          <label htmlFor="amount">amount</label>
-          <input type="text" placeholder="amount" />
-        </div>
-        <button type="submit">submit</button>
-      </form>
+      <img src={image1} alt="" />
+
+      <div className="innertransaction">
+        <p>
+          1, to save mony on your account please click here{" "}
+          <span>
+            <Link to="/save">SAVE</Link>
+          </span>
+        </p>
+
+        <p>
+          2, to transifer mony from account to account please cleck here{" "}
+          <span>
+            <Link to="/transfer">TRANSFER</Link>
+          </span>
+        </p>
+      </div>
     </div>
   );
 }

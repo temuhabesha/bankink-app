@@ -1,0 +1,80 @@
+.tranisfer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    background-color: #EDF2FA;
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    margin: 30px auto;
+    padding: 30px 50px;
+    align-items: center;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+form div label{
+    font-size: 25px;
+}
+form div input{
+    font-size: 22px;
+}
+form button{
+    background-color: blueviolet;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 22px;
+}
+.transaction img{
+    height: 600px;
+}
+.transaction{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 80vh;
+    width: 70%;
+    margin: auto;
+}
+.transaction h1{
+    color: blue;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.innertransaction{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 22px;
+}
+
+.innertransaction p span{
+    text-align: center;
+}
+.save{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 800px;
+    height: 80vh;
+    margin: 100px auto;
+    background-color: rgb(247, 247, 247);
+    padding: 20px;
+    padding-top: 80px;
+
+}
+.save form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

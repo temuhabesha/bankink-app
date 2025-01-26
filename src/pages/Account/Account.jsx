@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import './Account.css'
 import axios from 'axios'
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 const Account = () => {
 
   const[fathername,setfathername] = useState('');
@@ -26,6 +25,7 @@ const Account = () => {
   const[email,setemail] = useState('')
   const[password,setpassword] = useState('')
 
+
   const navigate = useNavigate()
 
  async function handelsubmit(event) {
@@ -35,6 +35,8 @@ const Account = () => {
          const status = responce.status;
          if(status == 200){
            alert(responce.data.msg)
+           const account = (responce.data.account);
+           alert(`please keep your account number for yourself only ${account}`)
            navigate("/login");
          }
     } catch (error) {
@@ -147,11 +149,10 @@ const Account = () => {
             <label htmlFor="">email</label>
             <input type="email" onChange={e=>setemail(e.target.value)} required/>
             </div>
-            <div>
-            <label htmlFor="">if you have an account please enter your account number</label>
-            <input type="text" onChange={e=>setaccountnumber(e.target.value)} required/>
-            </div>
             <button type='submit'>submit</button>
+            <div>
+              <p>if you have account please click here <span><Link to="/login" >Login</Link></span></p>
+            </div>
         </form>
       </div>
     </div>

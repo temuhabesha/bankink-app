@@ -1,6 +1,6 @@
 .footer{
     background-color: black;
-    height: 200px;
+    height: 300px;
 }
 .enerfooter{
     width: 70%;
@@ -16,16 +16,26 @@
     align-items: center;
     justify-content: space-between;
     margin: auto;
+    margin-top: 120px;
     width: 100%;
 }
 .lowerfooter P{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-}
-.lowerfooter p{
     color: white;
     align-items: center;
     justify-content: center;
+}
+
+.social_media{
+display: flex;
+gap: 25px;
+align-items: center;
+justify-content: center;
+
+}
+.social_media img{
+    width: 25px;
+    color: white;
 }

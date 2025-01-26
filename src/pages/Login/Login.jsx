@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 
 const Login = () => {
@@ -47,6 +47,12 @@ const Login = () => {
             onChange={(e) => setpassword(e.target.value)}
           />
         </div>
+        <p>
+          if you don't have account please login{" "}
+          <span>
+            <Link to="/account">Sign Up</Link>
+          </span>
+        </p>
         <button type="submit">Login</button>
       </form>
     </div>
